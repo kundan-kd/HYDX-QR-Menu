@@ -1,0 +1,124 @@
+.label_data {
+  height: 2rem;
+  padding: 0px 0.75rem;
+  background: transparent;
+  border-radius: 0.8rem;
+  border: 1px solid rgb(227, 224, 224);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  width: unset;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.label-color {
+  background-color: rgb(18, 128, 33);
+}
+
+.highlight {
+  border: 1px solid red;
+  font-weight: bold;
+  font-size: 45px;
+  background-color: blue;
+}
+
+.default {
+  background: lightgreen;
+  border: 1px solid #DDDDDD;
+  color: red;
+}
+
+.label_data:hover {
+  border-color: green;
+}
+
+/* #company_name, #company_address, #company_email, #company_mobile {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+} */
+
+/* #logo {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+} */
+
+#primarycolor {
+  width: 100%;
+  padding: 3px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+
+#namecolor{
+  width: 100%;
+  padding: 3px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* [data-menu-styles=light] .app-sidebar .side-menu__item.active .side-menu__icon,
+[data-menu-styles=light] .app-sidebar .side-menu__item.active .side-menu__label,
+[data-menu-styles=light] .app-sidebar .side-menu__item:hover .side-menu__icon,
+[data-menu-styles=light] .app-sidebar .side-menu__item:hover .side-menu__label {
+  color: red !important;
+} */
+
+.label_data_show {
+  height: 2rem;
+  padding: 0px 0.25rem;
+  background: transparent;
+  border-radius: 0.8rem;
+  border: 1px solid rgb(216, 214, 214);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  width: unset;
+  position: relative;
+  margin-bottom: 6px;
+}
+.profile-card {
+  height: 73vh !important;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .profile-card {
+    height: auto !important;
+  }
+}
+.ui-sortable-helper {
+  display: table;
+}
+.ui-state-highlight td{
+  background-color: rgb(229, 216, 153) !important;
+}
+#imgPreview{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+ display: none;
+}

@@ -1,0 +1,84 @@
+
+*{
+    margin: 0;
+    padding: 0;
+   }
+   .main-section{
+    margin-top: 10px;
+   } 
+   .maincard .card{
+    background-color: #132e46;
+    color: #ffff;
+   }
+   .maincard.card{
+    border: none;
+    margin: 10px;
+   }
+   .maincard .card p{
+    margin-bottom: 0;
+   }
+   .main-section .card-border{
+    border-left: 1px solid #5d6064;
+   }
+   .maincard .card-title {
+    font-size: 0.7rem;
+   }
+   .maincard .card-text{
+    font-weight: 500;
+}
+.maincard.card-text-two {
+    font-size: 0.6rem;
+}
+.maincard{
+    background-color: #132e46;
+    margin: 20px;
+    border-radius: 10px;
+    color: #ffff;
+    
+}
+.bdr-bottom{
+    border-bottom:0.05rem solid #5d6064 ;
+}
+.maincard .row{
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+}
+.maincard h6 {
+    font-size: 0.8rem;
+}
+.maincard p{
+    margin-bottom: 0;
+}
+.data-text{
+    color: #fff;
+    font-size: 0.7rem;
+}
+.title-bottom{
+    text-align: center;
+}
+.card-icon i{
+    background: #4CAF50;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 10px;
+    color: #fff;
+
+}
+#reportrange {
+    background: transparent;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border: 1px solid #525252;
+    width: max-content;
+    border-radius: 4px;
+}
+.text-success {
+    --bs-text-opacity: 1;
+    color: #4CAF50 !important;
+}
