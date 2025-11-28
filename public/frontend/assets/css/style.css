@@ -262,7 +262,6 @@ p{
     height: 40px;
     position: relative;
     overflow: hidden;
-
 }
 .decrement {
        /* margin-top: 0px; */
@@ -282,7 +281,7 @@ p{
         padding-bottom: 11px;
         padding-right: 12px;
         margin-left: 0px;
-        padding-left: 9px;
+        padding-left: 11px;
     }
 .increment {
     margin-top: -7px;
@@ -627,7 +626,10 @@ display: block;
        
     }
 } */
-
+.img_detail_font{
+        font-size: 0.75rem; /* Smaller font size than Bootstrap's fs-6 */
+        font-weight: 300;  /* Thin font weight */
+}
 /* -----------Footer Sticky------------ */
 html, body {
     height: 100%;

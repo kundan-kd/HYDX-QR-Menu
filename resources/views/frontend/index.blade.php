@@ -25,7 +25,6 @@
         .border {
             border-color: {{ $primary_color }}33 !important;
         }
-
         .badge_color {
             background-color: {{ $primary_color }} !important;
         }
@@ -147,7 +146,8 @@
                         @endforeach
                         <div class="bd-highlight">
                             <div data-bs-toggle="modal" data-bs-target="#cartModel" class=" bd-highlight">
-                                <button class="btn position-relative me-3 m-1 cart_button" style="padding: 5px;">
+                                <button class="btn position-relative me-3 m-1 cart_button"
+                                    style="padding: 5px;">
                                     <i class="fa fa-shopping-bag" aria-hidden="true"
                                         style="color: {{ $primary_color }};"></i><span class="text fs-18"></span>
                                     <span
@@ -399,15 +399,13 @@
                                     Qty: {{ $item['quantity'] }}
                                     <span><i class="fa fa-inr light-inr" aria-hidden="true"></i>
                                         {{ $item['price'] }}</span>
-                                    <span>
-                                        <div class="qty-controls" style="margin-top: -7px;margin-bottom: -7px;" data-item-id="{{ $item['id'] }}">
-                                            <span class="decrement"
-                                                onclick="adjustQuantity({{ $item['id'] }},{{ $item['price'] }},-1)">-</span>
-                                            <span class="qty"style="margin-top: 6px;!important">{{ $item['quantity'] }}</span>
-                                            <span class="increment"
-                                                onclick="adjustQuantity({{ $item['id'] }},{{ $item['price'] }},1)">+</span>
-                                        </div>
-                                    </span>
+                                        <span>
+                                            <div class="qty-controls" style="margin-top: -7px;margin-bottom: -7px;">
+                                                <span class="decrement" onclick="adjustQuantity({{ $item['id']}},{{ $item['price']}},-1)">-</span>
+                                                <span class="qty" style="margin-top: 6px;!important">{{ $item['quantity'] }}</span>
+                                                <span class="increment" onclick="adjustQuantity({{ $item['id']}},{{ $item['price']}},1)">+</span>
+                                                </div>
+                                        </span>
                                     {{-- &nbsp;<i class="fa fa-trash" aria-hidden="true"
                                         onclick="removeCartItems({{ $item['id'] }})"></i> --}}
                                 </li>
@@ -601,9 +599,9 @@
                     Qty: ${item.quantity}
                   <span><i class="fa fa-inr light-inr" aria-hidden="true"></i> ${item.price}</span>
                     <span>
-                         <div class="qty-controls" style="margin-top: -7px;margin-bottom: -7px;" data-item-id="${item.id}">
-                             <span class="decrement" onclick="adjustQuantity(${item.id},${item.price},-1)">-</span>
-                             <span class="qty" style="margin-top: 6px;!important">${item.quantity}</span>
+                         <div class="qty-controls" style="margin-top: -7px;margin-bottom: -7px;">
+                            <span class="decrement" onclick="adjustQuantity(${item.id},${item.price},-1)">-</span>
+                            <span class="qty" style="margin-top: 6px;!important">${item.quantity}</span>
                             <span class="increment" onclick="adjustQuantity(${item.id},${item.price},1)">+</span>
                         </div>
                    </span>

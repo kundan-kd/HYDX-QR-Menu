@@ -6,7 +6,7 @@ $(function() {
 
     function cb(start, end) {
         $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-        duration_custom(start,end);
+         duration_custom(start, end);
     }
 
     $('#reportrange').daterangepicker({
@@ -25,3 +25,4 @@ $(function() {
     cb(start, end);
 
 });
+

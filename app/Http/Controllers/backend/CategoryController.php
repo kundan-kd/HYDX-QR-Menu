@@ -72,6 +72,7 @@ class CategoryController extends Controller
 
     public function catPositionUpdate(Request $request)
     {
+    dd($request->all());
         $order = $request->order;
         foreach ($order as $item) {
             $ids = $item['id'];

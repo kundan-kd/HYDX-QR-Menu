@@ -74,7 +74,7 @@
                                                             onclick="updateCategory()">
                                                             <span>Update</span>
                                                         </button>
-                                                        <button type="button" class="btn btn-danger" style="margin-left: 0px;margin-top: 20px;" onclick="resetcat()">
+                                                         <button type="button" class="btn btn-danger" style="margin-left: 0px;margin-top: 20px;" onclick="resetcat()">
                                                             <span>Reset</span>
                                                         </button>
                                                     </div>
@@ -361,7 +361,7 @@
                 });
             } else {}
         }
-        function resetcat() {
+         function resetcat() {
             $('.update_section').hide();
             $('.add_section').show();
             $('#id').val('');

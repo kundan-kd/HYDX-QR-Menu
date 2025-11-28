@@ -15,7 +15,6 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 
-
 /*------------Frontend Route------------------*/
 Route::get('/', [IndexController::class, 'index'])->name('frontend.index');
 Route::post('/filter', [IndexController::class, 'filterdata'])->name('frontend.filterdata');
@@ -82,7 +81,9 @@ Route::group(['middleware' => ['auth'],], function () {
     Route::post('/admin-colorName', [CompanyController::class, 'nameColor'])->name('company.nameColor');
     Route::post('/admin-logoUpload', [CompanyController::class, 'uploadlogo'])->name('company.uploadlogo');
     Route::post('/admin-companyName', [CompanyController::class, 'nameUpdate'])->name('company.nameUpdate');
-
     Route::get('/get-monitors', [ApiController::class, 'getMonitors'])->name('api_data');
+    Route::post('/get-monitors-30', [ApiController::class, 'getMonitors_duration_30'])->name('api_data.duration_30');
+     Route::post('/get-monitors-365', [ApiController::class, 'getMonitors_duration_365'])->name('api_data.duration_365');
+    Route::post('/get-monitors-custom-duration', [ApiController::class, 'getMonitors_duration_custom'])->name('api_data.duration_custom');
 });
 Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');

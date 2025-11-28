@@ -149,11 +149,11 @@
                 itemSummary.show();
                 if (n < 1) {
                     qtyElement.text('0');
-                    // let p = $(this).parent();
-                    // p.hide();
-                    // let b = p.siblings('.add-btn');
-                    // b.show();
-                    // itemSummary.hide();
+                    let p = $(this).parent();
+                    p.hide();
+                    let b = p.siblings('.add-btn');
+                    b.show();
+                    itemSummary.hide();
                 }
             });
         });
@@ -189,13 +189,11 @@
             })
         });
 
-        function getimage(src, id, name, price,desc) {
+          function getimage(src, id, name, price,desc) {
             var output1 = `
-      <div class="filter-title mb-3 pt-3 d-flex justify-content-between" style="text-align: left;">
+      <div class="filter-title mb-3 pt-3 d-flex justify-content-between">
     <div>
-        <h5>${name}</h5>
-        <h5>₹ ${price}</h5>
-        <p>${desc}</p>
+        <span class="img_detail_font" style="font-size: 15px; font-weight: initial; text-align: left;">${name}- ₹ ${price}<br>Description: ${desc}</span>
     </div>
     <div class="text-center quantity-selector" style="margin-top: -82px; margin-left: 70%;">
         <button class="add-btn" onclick="addItemToCart(${id}, ${price})">Add</button>

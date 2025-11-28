@@ -423,7 +423,7 @@
             } else {}
         }
 
-        function resetsubcat() {
+         function resetsubcat() {
             $('.update_section').hide();
             $('.add_section').show();
             $('#id').val('');

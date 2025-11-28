@@ -16,6 +16,7 @@ class CartController extends Controller
         $item_price = floatval($request->offer_price);
         $total_price = $item_quantity * $item_price;
         $product = Item::where('id', $item_id)->first();
+
         if (is_null($product)) {
             return response()->json([
                 'error' => 'Product not found'
@@ -40,21 +41,24 @@ class CartController extends Controller
             }
         }
         session()->put('cart', $cart);
-        return response()->json(['success' => 'Product added to cart', 'cart' => array_values($cart)]);
+        return response()->json([
+            'success' => 'Product added to cart',
+            'cart' => array_values($cart)
+        ]);
     }
-    public function clearCartItems(Request $request)
-    {
+      public function clearCartItems(Request $request){
         $cart_id = $request->id;
-        $cart = session()->get('cart', []);
-        if (isset($cart[$cart_id])) {
+        $cart = session()->get('cart',[]);
+        if(isset($cart[$cart_id])){
             unset($cart[$cart_id]);
         }
-        session()->put('cart', $cart);
-        return response()->json(['success' => 'Item Removed Successfully', 'cart' => array_values($cart)]);
+        session()->put('cart',$cart);
+        return response()->json(['success'=>'Item Removed Successfully','cart'=>array_values($cart)]);
+
     }
     public function clearCart()
     {
-        session()->forget('cart');
+         session()->forget('cart');
         return response()->json(['success' => 'Cart Cleared Successfully']);
     }
 }

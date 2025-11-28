@@ -19,7 +19,7 @@ class IndexController extends Controller
         $category_data = Category::get();
         $labels = LabelSetting::get();
         $cart = session()->get('cart', []);
-        return view('frontend.index', compact('category_data', 'labels', 'cart'));
+        return view('frontend.index', compact('category_data', 'labels','cart'));
     }
     public function filterdata(Request $request)
     {
@@ -107,19 +107,19 @@ class IndexController extends Controller
                                 </div>
                                         <div class="item-image"><img src="uploads/items/' . $items->item_image . '" height="144" width="156"
                                             alt="item" class="rounded" data-bs-toggle="modal"
-                                             data-bs-target="#exampleModal" onclick="getimage(this.src,' . $items->id . ',`' . $items->item_name . '`,' . $items->offer_price . ',`' . $items->desc . '`)" style="border-radius: 12px !important;"/>
+                                             data-bs-target="#exampleModal" onclick="getimage(this.src,'. $items->id .',`'. $items->item_name .'`,'. $items->offer_price .',`'. $items->desc .'`)" style="border-radius: 12px !important;"/>
                                            <div class="text-center quantity-selector" data-bs-toggle="modal"
                                                 data-bs-target="//#itemSummaryModal" onclick="//getmodelimage(' . $items->id . ',`' . $items->item_image . '`,`' . $items->item_name . '`,' . $items->offer_price . ')">
-                                            <button class="add-btn" onclick="addItemToCart(' . $items->id . ',' . $items->offer_price . ')">Add</button>
+                                            <button class="add-btn" onclick="addItemToCart('. $items->id .','. $items->offer_price .')">Add</button>
                                             <div class="qty-controls" style="display:none;" data-item-id="{{ $items->id }}">
-                                             <span class="decrement" onclick="adjustQuantity(' . $items->id . ',' . $items->offer_price . ', -1)">-</span>
+                                             <span class="decrement" onclick="adjustQuantity('. $items->id .','. $items->offer_price .', -1)">-</span>
                                              <span class="qty">1</span>
-                                             <span class="increment" onclick="adjustQuantity(' . $items->id . ',' . $items->offer_price . ', 1)">+</span>
+                                             <span class="increment" onclick="adjustQuantity('. $items->id .','. $items->offer_price .', 1)">+</span>
                                              </div>
                                             </div>
                                         </div>
                                </div>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                                             aria-hidden="true">
                                         <div class="modal-dialog">
                                         <div class="modal-content front_image_modal">
@@ -161,4 +161,5 @@ class IndexController extends Controller
         }
         return $response;
     }
+    
 }
